@@ -1,0 +1,668 @@
+
+/*FONTS*/
+.nunito {
+  font-family: 'Nunito Sans', sans-serif;}
+
+.between {
+  font-weight: 800;
+}
+
+  .playfair {font-family: 'Playfair Display', serif;}
+
+  .crimson {font-family: 'Crimson Text', serif;}
+
+.noto {font-family: 'Noto Serif SC', serif;}
+
+.ibm {font-family: 'IBM Plex Mono', monospace;
+}
+
+.Garamond {font-family: 'EB Garamond', serif;}
+
+  @font-face {font-family: Circular; src: url('/css/fonts/CircularStd-Bold.otf'); }
+  @font-face {font-family: circularMed; src: url('/css/fonts/CircularStd-Medium.otf'); }
+
+  @font-face {font-family: replica; src: url('/css/fonts/Replica-Regular.ttf'); }
+
+
+  .darker {font-family: Circular, sans-serif; }
+
+  .test {font-family: circularMed, sans-serif;}
+
+  .replica {font-family:replica, sans-serif;}
+
+.miller {
+  font-family: miller-display, serif;
+  font-style: normal;
+  font-weight: 300;}
+
+  .millerbold {font-family: miller-display, serif;
+
+font-weight: 700;
+
+font-style: normal;}
+
+/*cursors*/
+  .cell {
+    cursor: url(/images/loli.png), auto;
+  }
+
+  .money {
+    cursor: url(/images/moneyred.png), auto;
+  }
+
+
+  .moneyg {
+    cursor: url(/images/moneygreen.png), auto;
+  }
+
+  .point {
+    cursor: pointer;
+  }
+
+  .pilly {
+    cursor: url(/images/pills.png), auto;
+  }
+
+  #draggable { width: 150px; height: 150px; padding: 0.5em; }
+
+
+  .datos{
+  table-layout: fixed;
+}
+.modal-header{
+   cursor: move;
+   background-color: black;
+   color: white;
+  }
+
+.modal-backdrop {opacity: 0 !important; }
+
+
+
+
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+
+
+
+
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+.someClass {
+   background-image: url(images/coke.png);
+}
+
+
+/*MOVING ADD*/
+
+.example1 {
+  height: 300px;
+ overflow: hidden;
+ position: relative;
+}
+
+.bbg {
+  background-image: url(/images/coke.png);
+background-repeat: no-repeat;
+background-size: contain;
+}
+
+.example1 .bbg {
+ position: absolute;
+ margin: 0;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: example1 10s linear infinite;
+}
+/* Move it (define the animation) */
+
+@keyframes example1 {
+ 0%   {
+ transform: translateX(1000%);
+ }
+ 100% {
+ transform: translateX(-100%);
+ }
+}
+
+
+
+/*scrolling text on front page
+.sugar {
+  height:30vw;
+ overflow: hidden;
+ position: relative;
+}
+.sugar .articleone {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ text-align: center;
+ /* Starting position
+ transform:translateX(100%);
+ /* Apply animation to this element
+ animation: articleone 10s linear infinite;
+}
+/* Move it (define the animation)
+
+@keyframes articleone {
+ 0%   {
+ transform: translateX(100%);
+ }
+ 100% {
+ transform: translateX(-100%);
+ }
+}
+
+.spice {
+  height:20vw;
+ overflow: hidden;
+ position: relative;
+}
+.spice .articletwo {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ text-align: center;
+ /* Starting position
+ transform:translateX(-100%);
+ /* Apply animation to this element
+ animation: articletwo 15s linear infinite;
+}
+/* Move it (define the animation)
+
+@keyframes articletwo {
+ 0%   {
+ transform: translateX(-100%);
+ }
+ 100% {
+ transform: translateX(100%);
+ }
+}
+
+
+
+.nice {
+  height:20vw;
+ overflow: hidden;
+ position: relative;
+}
+.nice .articlethree {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ text-align: center;
+ /* Starting position
+ transform:translateX(100%);
+ /* Apply animation to this element
+ animation: articlethree 7s linear infinite;
+}
+/* Move it (define the animation)
+
+@keyframes articlethree {
+ 0%   {
+ transform: translateX(100%);
+ }
+ 100% {
+ transform: translateX(-100%);
+ }
+}
+
+/*testing popup*/
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 50vw;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+
+
+
+/*SLIDING COKE REPEAT IMAGE*/
+
+.over {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+background-image: url(/images/coke-ad.png);
+  background-size: 200px 100px;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.under {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+background-image: url(/images/pill-bottles.png);
+  background-size: 200px 100px;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.aroundit {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+background-image: url(/images/fracking.png);
+  background-size: 200px 100px;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+
+
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.over a {
+  padding-left: 20vw;
+  padding-right:20vw;
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.under a {
+  padding-left: 20vw;
+  padding-right:20vw;
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.aroundit a {
+  padding-left: 20vw;
+  padding-right:20vw;
+  text-decoration: none;
+  font-size: 50px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.over a:hover, .over a:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.under a:hover, .under a:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.aroundit a:hover, .aroundit a:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.over .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.under .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.aroundit .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .over a {font-size: 20px}
+  .over .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .under a {font-size: 20px}
+  .under .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .aroundit a {font-size: 20px}
+  .aroundit .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+
+/*overlay image ad*/
+
+.chart {
+  width: 30vw;
+}
+
+
+
+.imageBox {
+  position: relative;
+  float: left;
+}
+
+.imageBox .hoverImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+
+.imageBox:hover .hoverImg {
+  display: block;
+}
+
+
+
+/*overlay image 2*/
+
+.charttwo {
+  width: 30vw;
+}
+
+.jump {
+    border: 5px solid red;
+  box-shadow:  11px 11px 5px 0px rgba(0,0,0,0.15);
+}
+
+.jumpy
+{
+    border: 5px solid #357EDD;
+  box-shadow:  11px 11px 5px 0px rgba(0,0,0,0.15);
+}
+
+.jumper
+{
+    border: 5px solid #19A974;
+  box-shadow:  11px 11px 5px 0px rgba(0,0,0,0.15);
+}
+
+.imageBoxtwo {
+  position: relative;
+  float: right;
+}
+
+.imageBoxtwo .hoverImgtwo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+
+.imageBoxtwo:hover .hoverImgtwo {
+  display: block;
+}
+
+
+
+.imageBoxthree {
+  position: relative;
+  float: right;
+}
+
+.imageBoxthree .hoverImgthree {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+
+.imageBoxthree:hover .hoverImgthree {
+  display: block;
+}
+
+
+
+
+
+.imageBoxfour {
+  position: relative;
+  float: left;
+}
+
+.imageBoxfour .hoverImgfour {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+
+.imageBoxfour:hover .hoverImgfour {
+  display: block;
+}
+
+
+
+
+/*text reveal*/
+
+.dropt:hover {z-index: 6;}
+.dropt span {position: absolute;
+   z-index: 6;}
+.dropt:hover span {left: 2%; }
+.dropt span {position: absolute; left: -9999px;
+  margin: 4px 0 0 0px; padding: 3px 3px 3px 3px;
+  border: solid 1px gray;
+  }
+.dropt:hover span {margin: 20px 0 0 170px; background: #ffffff; z-index:6;}
+
+
+/*kettle text reveal*/
+
+.kettle:hover {z-index: 6;}
+.kettle span {position: absolute;
+   z-index: 6;}
+.kettle:hover span {left: 2%; }
+.kettle span {position: absolute; left: -9999px;
+  margin: 4px 0 0 0px; padding: 3px 3px 3px 3px;
+  border: solid 1px gray;
+  }
+.kettle:hover span {margin: 20px 0 0 170px; background: #ffffff; z-index:6;}
+
+
+.thirsty {
+background-color: white;
+border: none;
+color: red;
+text-decoration: none;
+display: inline-block;
+}
+
+.griddy {
+  width:288px;
+  height:200px;
+}
+
+.oolala {
+  background-image: url(/images/mm.png);
+}
+
+.oolala2 {
+  background-image: url(/images/drugs.png);
+}
+
+.oolala3 {
+  background-image: url(/images/pollution.png);
+}
+
+
+.overit {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+.overit2 {
+  background-color: rgba(53, 126, 221, 0.6);
+}
+
+.overit3 {
+  background-color: rgba(25, 169, 116, 0.6);
+}
+
+.square {
+  width:10px;
+  height:10px;
+}
+
+.smallguy {
+  width:30px;
+}
+
+.zoom {
+transition: transform .2s; /* Animation */}
+
+.zoom:hover {
+  transform: scale(5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.zoomed {
+transition: transform .2s; /* Animation */}
+
+.zoomed:hover {
+  transform: scale(8); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
